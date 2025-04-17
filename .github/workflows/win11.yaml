@@ -1,0 +1,23 @@
+name: Build and Test (Windows on Arm -C#)
+on:
+    push:
+	branches:
+	   - main
+
+jobs：
+   build:
+      runs-on: windows-11-arm
+      steps:
+         - name: Checkout code
+           uses: actions/checkout@v3
+
+         - name: Setup Visual Studio
+           uses: microsoft/setup-msbuild@v1
+
+          - name: Restore NuGet packages
+             run: nuget restore MySolution.s1n
+
+           - name: Build the solution
+             run: msbuild MySolution.sln /p:Configuration=Release
+
+           - name: Run tests
