@@ -9,14 +9,10 @@ jobs:
     steps:
       - name: Checkout code 
         uses: actions/checkout@v3
-	
       - name: Setup Visual Studio
         uses: microsoft/setup-msbuild@v1
-   
       - name: Restore NuGet packages
         run: nugetrestore MySolution.s1n
-	
       - name: Build the solution
         run: msbuild MySolution.sln /p:Configuration=Release
-	
       - name: Run tests
