@@ -29,9 +29,7 @@ jobs:
         run: |
           # Download ngrok
           wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
-          unzip ngrok-v3-stable-linux-amd64.tgz
-          chmod +x ngrok
-          mv ngrok /usr/local/bin/
+          sudo tar -xvzf ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
 
       - name: Start ngrok TCP tunnel
         run: |
