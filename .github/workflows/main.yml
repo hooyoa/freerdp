@@ -28,8 +28,8 @@ jobs:
       - name: Install ngrok
         run: |
           # Download ngrok
-          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-          unzip ngrok-stable-linux-amd64.zip
+          wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+          unzip ngrok-v3-stable-linux-amd64.zip
           chmod +x ngrok
           mv ngrok /usr/local/bin/
 
